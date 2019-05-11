@@ -10,5 +10,5 @@ def index(request):
     else:
         data = {"message": "Welcome to the store"}
 
-    return render(request, "welcome.html", data)
+    return render(request, "_storeLayout.html", data)
 
