@@ -1,13 +1,51 @@
 
 
 <div ng-controller="storeSearchController">
-    <h1>Store Search</h1>
+
+    <div id="search-container" >
+        <label>Name:</label>
+        <input type="text" data-search="name" />
+
+        <label>Set:</label>
+        <input type="text" data-search="set" />
+
+        <label>Colors:</label>
+        <input type="text" data-search="colors" />
+
+        <label>Converted Mana Cost:</label>
+        <input type="text" data-search="cmc" />
+
+        <label>Rarity:</label>
+        <input type="text" data-search="rarity" />
+
+        <label>Type:</label>
+        <input type="text" data-search="type" />
+
+        <label>Subtype:</label>
+        <input type="text" data-search="subtypes" />
+
+        <label>Text:</label>
+        <input type="text" data-search="text" />
+
+        <input type="hidden" data-search="pageSize" value="20"/>
+
+        <input type="button" value="Search" ng-click="searchCards()"/>
+    </div>
+
+
+
+    <div id="search-results" >
+        <div ng-repeat="card in cards">
+            <img ng-src="{{ card.imageUrl }}" />
+
+
+
+
+        </div>
+
+    </div>
+
 </div>
-
-
-
-
-
 
 
 

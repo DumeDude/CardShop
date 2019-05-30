@@ -3,8 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>Card Shop : Store</title>
+
+        <link href="/static/styles/search.css" rel="stylesheet"/>
+
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <script src="/static/javascript/app.js"></script>
         <script src="/static/javascript/magicApiService.js"></script>
         <script src="/static/javascript/viewCardController.js"></script>
@@ -12,17 +16,20 @@
     </head>
     <body>
 
-        <div style="width: 100%; background: blue;">
+        <div id="store-header">
             <h2>Header</h2>
         </div>
 
-        <div ng-app="card-store">
-            <div ng-view></div>
+        <div ng-app="card-store" id="store-body">
+            <div ng-view style="display: inline;"></div>
+            <div style="display: inline;" id="store-display"></div>
         </div>
 
-        <div style="width: 100%; background: blue;">
+
+        <!--
+        <div id="store-footer">
             <p>Footer</p>
         </div>
-
+        -->
     </body>
 </html>
