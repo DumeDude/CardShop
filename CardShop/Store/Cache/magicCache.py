@@ -1,0 +1,6 @@
+
+class MagicCache:
+    sets = None
+
+
+

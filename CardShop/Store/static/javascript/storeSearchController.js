@@ -12,6 +12,13 @@
 	            $scope.cards = response.data.cards;
 	        });
 	    }
+
+	    $scope.selectSet = function(e){
+	        alert("here");
+	        alert(JSON.stringify(e));
+
+	    };
+
 	};
 
 	app.controller("storeSearchController", storeSearchController);

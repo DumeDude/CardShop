@@ -21,9 +21,9 @@
 
         <script>
             var txt = document.createElement("textarea");
-            txt.innerHTML = "{{ sets }}";
-            console.log(txt.value);
-            var magicSets = JSON.parse(txt.value);
+            var json = "{{ sets|escapejs }}".replace(/'/g, '"');
+
+            var magicSets = JSON.parse(json);
         </script>
     </head>
     <body>

@@ -8,11 +8,14 @@
 
         <label>Set:</label>
         <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="setDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Dropdown button
             </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <p ng-repeat="set in magicSets"><span>{{ set.name }}</span><span style="color: red;" >{{ set.releaseDate }}</span></p>
+
+            <div class="dropdown-menu" aria-labelledby="setDropdown">
+                <p style="cursor: pointer;" ng-repeat="set in magicSets">
+                    <div ng-click="selectSet" style="cursor: pointer; display: inline-block;">{{ set.name }}</div><div style="display: inline:block; color: red; float: right;" >{{ set.releaseDate }}</div>
+                </p>
             </div>
         </div>
 
