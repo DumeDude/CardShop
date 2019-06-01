@@ -1,14 +1,17 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+import Store.services
+from Store.services.magicApiCaller import MagicApiCaller
 
 
 def index(request):
     message = request.GET.get('message')
 
-    if message:
-        data = {"message": message}
-    else:
-        data = {"message": "Welcome to the store"}
+    # TODO create cache, and check that before calling api again
 
-    return render(request, "_storeLayout.html", data)
+    magicCaller = MagicApiCaller()
+    sets = magicCaller.getSets()
+
+    # TODO null check here
+
+    return render(request, "_storeLayout.html", sets)
 

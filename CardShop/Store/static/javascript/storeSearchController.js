@@ -3,6 +3,8 @@
     var app = angular.module("card-store");
 
 	var storeSearchController = function ($scope, magicCaller){
+	    $scope.magicSets = magicSets;
+
 	    $scope.cards = [];
 	    $scope.searchCards = function(){
 	        magicCaller.searchCards().then(function(response){
