@@ -1,48 +1,74 @@
 
-
 <div ng-controller="storeSearchController">
 
     <div id="search-container" >
         <label>Name:</label>
         <input type="text" data-search="name" />
 
-        <label>Set:</label>
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="setDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown button
-            </button>
-
-            <div class="dropdown-menu" aria-labelledby="setDropdown">
-                <p style="cursor: pointer;" ng-repeat="set in magicSets">
-                    <div ng-click="selectSet" style="cursor: pointer; display: inline-block;">{{ set.name }}</div><div style="display: inline:block; color: red; float: right;" >{{ set.releaseDate }}</div>
-                </p>
-            </div>
-        </div>
-
-        <input type="text" data-search="set" />
+        <label><span class="caret"></span>Set:</label>
+         <div class="dropdown" style="width: 100%;">
+             <input type="hidden" data-search="set"  data-search-role="text-input" id="setCode"/>
+             <button style="width: 100%;" class="btn btn-default dropdown-toggle" type="button" id="dropdownforset" data-toggle="dropdown"><span id="setDropdownText">{{ setDropdownDisplay }}</span></span></button>
+             <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownforset" id="setDropdownList">
+                 <li ng-repeat="set in magicSets" role="presentation">
+                     <span style="cursor: pointer;" ng-click="selectSet()">{{ set.name }}</span>
+                     <span style="color: red; float: right;">{{ set.releaseDate }}</span>
+                 </li>
+             </ul>
+         </div>
 
         <label>Colors:</label>
-        <input type="text" data-search="colors" />
+        <label type="checkbox" name="color" data-search="colors" data-type="checkbox" >Blue</label>
+        <input type="checkbox" name="color" data-search="colors" data-type="checkbox" vlaue="blue"/>
 
+        <label type="checkbox" name="color" data-search="colors" data-type="checkbox" >Green</label>
+        <input type="checkbox" name="color" data-search="colors" data-type="checkbox" value="green"/>
+
+        <label type="checkbox" name="color" data-search="colors" data-type="checkbox" >Red</label>
+        <input type="checkbox" name="color" data-search="colors" data-type="checkbox" value="red"/>
+
+        <label type="checkbox" name="color" data-search="colors" data-type="checkbox" >Black</label>
+        <input type="checkbox" name="color" data-search="colors" data-type="checkbox" value="black"/>
+
+        <label type="checkbox" name="color" data-search="colors" data-type="checkbox" >White</label>
+        <input type="checkbox" name="color" data-search="colors" data-type="checkbox" value="white"/>
+
+        <!--TODO should be inline with the mana types, or 3 mana colors on one row, 2 mana colors and CMC on the next line -->
         <label>Converted Mana Cost:</label>
-        <input type="text" data-search="cmc" />
+        <input type="text" data-search-role="text-input" data-search="cmc" />
 
         <label>Rarity:</label>
-        <input type="text" data-search="rarity" />
+        <div class="dropdown" style="width: 100%;">
+            <input type="hidden" data-search-role="text-input" data-search="rarity" id="rarity" />
+            <button style="width: 100%;" class="btn btn-default dropdown-toggle" type="button" id="dropdownForRarity" data-toggle="dropdown"><span id="rarityDropdownText">{{ rarityDropdownText }}</span></span></button>
+
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownForRarity">
+                 <li role="presentation" ng-click="selectRarity('Mythic Rare')">Mythic Rare</li>
+                 <li role="presentation" ng-click="selectRarity('Rare')">Rare</li>
+                 <li role="presentation" ng-click="selectRarity('Uncommon')">Uncommon</li>
+                 <li role="presentation" ng-click="selectRarity('Common')">Common</li>
+            </ul>
+         </div>
+
 
         <label>Type:</label>
-        <input type="text" data-search="type" />
+        <input type="text" data-search-role="text-input" data-search="type" />
 
         <label>Subtype:</label>
-        <input type="text" data-search="subtypes" />
+        <input type="text" data-search-role="text-input" data-search="subtypes" />
 
         <label>Text:</label>
-        <input type="text" data-search="text" />
+        <input type="text" data-search-role="text-input"data-search="text" />
 
-        <input type="hidden" data-search="pageSize" value="20"/>
-
+        <input type="hidden" data-search="pageSize" value="50"/>
         <input type="button" value="Search" ng-click="searchCards()"/>
     </div>
+
+
+
+
+
+
 
 
 

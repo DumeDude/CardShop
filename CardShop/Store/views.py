@@ -19,7 +19,6 @@ def index(request):
         for set in sets:
             if set is not None and not set['onlineOnly']:
                 safeName = re.sub('[^A-Za-z0-9\.]+',  ' ', set['name']).lstrip()
-                print(safeName)
 
                 newItem = {"name": safeName, "code": set['code'], "releaseDate": set['releaseDate']}
                 newCache.append(newItem)

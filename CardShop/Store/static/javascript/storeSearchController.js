@@ -4,20 +4,30 @@
 
 	var storeSearchController = function ($scope, magicCaller){
 	    $scope.magicSets = magicSets;
+	    $scope.setDropdownDisplay = "select a set";
+	    $scope.rarityDropdownText = "select a rarity";
 
 	    $scope.cards = [];
 	    $scope.searchCards = function(){
 	        magicCaller.searchCards().then(function(response){
-	            console.log(JSON.stringify(response.data.cards));
 	            $scope.cards = response.data.cards;
 	        });
 	    }
 
 	    $scope.selectSet = function(e){
-	        alert("here");
-	        alert(JSON.stringify(e));
+	        var set = this.set;
+            if(set == null){
+                return;
+            }
 
+            $scope.setDropdownDisplay = set.name;
+            $("#setCode").val(set.code);
 	    };
+
+	    $scope.selectRarity = function(e){
+            $scope.rarityDropdownText = e;
+            $("#rarity").val(e);
+	    }
 
 	};
 

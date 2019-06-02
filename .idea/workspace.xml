@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e7b5ccb-83e5-4a18-b547-58c41009c8ca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CardShop/Store/Cache/magicCache.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CardShop/Store/static/javascript/magicApiService.js" beforeDir="false" afterPath="$PROJECT_DIR$/CardShop/Store/static/javascript/magicApiService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CardShop/Store/static/javascript/storeSearchController.js" beforeDir="false" afterPath="$PROJECT_DIR$/CardShop/Store/static/javascript/storeSearchController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CardShop/Store/static/templates/storeSearch.html" beforeDir="false" afterPath="$PROJECT_DIR$/CardShop/Store/static/templates/storeSearch.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CardShop/Store/templates/_storeLayout.html" beforeDir="false" afterPath="$PROJECT_DIR$/CardShop/Store/templates/_storeLayout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CardShop/Store/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/CardShop/Store/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,7 +15,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CardShop/Store/static/javascript/storeSearchController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -29,6 +38,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>magicApiCaller</find>
+      <find>menu1</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\barke\PycharmProjects\CardShop\CardShop\Store\static\styles</dir>
@@ -70,13 +80,13 @@
         <option value="$PROJECT_DIR$/CardShop/CardShop/settings/settings_base.py" />
         <option value="$PROJECT_DIR$/CardShop/CardShop/urls.py" />
         <option value="$PROJECT_DIR$/CardShop/Store/static/javascript/app.js" />
-        <option value="$PROJECT_DIR$/CardShop/Store/static/javascript/magicApiService.js" />
         <option value="$PROJECT_DIR$/CardShop/Store/static/styles/search.css" />
         <option value="$PROJECT_DIR$/CardShop/Store/services/magicApiCaller.py" />
         <option value="$PROJECT_DIR$/CardShop/CardShop/settings/settings_develop.py" />
         <option value="$PROJECT_DIR$/CardShop/Store/Cache/magicCache.py" />
         <option value="$PROJECT_DIR$/CardShop/Store/views.py" />
         <option value="$PROJECT_DIR$/CardShop/Store/templates/_storeLayout.html" />
+        <option value="$PROJECT_DIR$/CardShop/Store/static/javascript/magicApiService.js" />
         <option value="$PROJECT_DIR$/CardShop/Store/static/javascript/storeSearchController.js" />
         <option value="$PROJECT_DIR$/CardShop/Store/static/templates/storeSearch.html" />
       </list>
@@ -94,7 +104,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -105,18 +114,13 @@
             <path>
               <item name="CardShop" type="b2602c69:ProjectViewProjectNode" />
               <item name="CardShop" type="462c0819:PsiDirectoryNode" />
-              <item name="CardShop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CardShop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CardShop" type="462c0819:PsiDirectoryNode" />
-              <item name="CardShop" type="462c0819:PsiDirectoryNode" />
-              <item name="settings" type="462c0819:PsiDirectoryNode" />
+              <item name="Store" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CardShop" type="b2602c69:ProjectViewProjectNode" />
               <item name="CardShop" type="462c0819:PsiDirectoryNode" />
               <item name="Store" type="462c0819:PsiDirectoryNode" />
+              <item name="Cache" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CardShop" type="b2602c69:ProjectViewProjectNode" />
@@ -138,10 +142,17 @@
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="CardShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CardShop" type="462c0819:PsiDirectoryNode" />
+              <item name="Store" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -151,13 +162,13 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\barke\PycharmProjects\CardShop\CardShop\Store\static" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\barke\PycharmProjects\CardShop\CardShop\Store\static\javascript" />
       <recent name="C:\Users\barke\PycharmProjects\CardShop\CardShop\CardShop\static\javascript" />
       <recent name="C:\Users\barke\PycharmProjects\CardShop\CardShop\Store\static\templates" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\barke\PycharmProjects\CardShop\CardShop\Store\static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -227,7 +238,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.16124469" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.145686" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -356,13 +367,6 @@
     <entry file="file://$PROJECT_DIR$/CardShop/Store/services/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/CardShop/Store/static/javascript/magicApiService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="29" lean-forward="true" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CardShop/Store/services/magicApiCaller.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -384,10 +388,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CardShop/Store/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="20" column="80" selection-start-line="20" selection-start-column="80" selection-end-line="20" selection-end-column="80" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CardShop/Store/templates/_storeLayout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="39" column="14" lean-forward="true" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+        <state relative-caret-position="425">
+          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -395,32 +409,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CardShop/Store/views.py">
+    <entry file="file://$PROJECT_DIR$/CardShop/Store/static/javascript/magicApiService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="19" column="56" lean-forward="true" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
+        <state>
+          <caret line="6" column="43" lean-forward="true" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CardShop/Store/static/templates/storeSearch.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="47" lean-forward="true" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
+        <state relative-caret-position="170">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
           <folding>
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CardShop/Store/static/javascript/storeSearchController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="37" lean-forward="true" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+        <state relative-caret-position="476">
+          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
         </state>
       </provider>
     </entry>
