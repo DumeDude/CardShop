@@ -17,6 +17,8 @@
 	    $scope.selectSet = function(e){
 	        var set = this.set;
             if(set == null){
+                $scope.setDropdownDisplay = "All";
+                $("#setCode").val('');
                 return;
             }
 
