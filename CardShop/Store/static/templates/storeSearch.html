@@ -3,11 +3,11 @@
 
     <div id="search-container" >
         <label>Name:</label>
-        <input type="text" data-search="name" />
+        <input type="text" data-search-role="text-input" data-search="name" value="{{ name }}" />
 
-        <label><span class="caret"></span>Set:</label>
+        <label>Set:</label>
          <div class="dropdown" style="width: 100%;">
-             <input type="hidden" data-search="set"  data-search-role="text-input" id="setCode"/>
+             <input type="hidden" data-search="set"  data-search-role="text-input" id="setCode" value="{{ setCode }}"/>
              <button style="width: 100%;" class="btn btn-default dropdown-toggle" type="button" id="dropdownforset" data-toggle="dropdown"><span id="setDropdownText">{{ setDropdownDisplay }}</span></span></button>
              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownforset" id="setDropdownList">
                  <li role="presentation">
@@ -20,34 +20,35 @@
              </ul>
          </div>
 
-        <label>Colors:</label>
-        <label type="checkbox" name="color" data-search="colors" data-type="checkbox" >Blue</label>
-        <input type="checkbox" name="color" data-search="colors" data-type="checkbox" vlaue="blue"/>
-
-        <label type="checkbox" name="color" data-search="colors" data-type="checkbox" >Green</label>
-        <input type="checkbox" name="color" data-search="colors" data-type="checkbox" value="green"/>
-
-        <label type="checkbox" name="color" data-search="colors" data-type="checkbox" >Red</label>
-        <input type="checkbox" name="color" data-search="colors" data-type="checkbox" value="red"/>
-
-        <label type="checkbox" name="color" data-search="colors" data-type="checkbox" >Black</label>
-        <input type="checkbox" name="color" data-search="colors" data-type="checkbox" value="black"/>
-
-        <label type="checkbox" name="color" data-search="colors" data-type="checkbox" >White</label>
-        <input type="checkbox" name="color" data-search="colors" data-type="checkbox" value="white"/>
-
-        <!--TODO should be inline with the mana types, or 3 mana colors on one row, 2 mana colors and CMC on the next line -->
+        <label>Mana:</label>
         <label>Converted Mana Cost:</label>
-        <input type="text" data-search-role="text-input" data-search="cmc" />
+        <input type="text" data-search-role="text-input" data-search="cmc" value="{{ cmc }}"/>
+
+        <div id="color-select">
+            <label type="checkbox" name="color" data-search="colors" data-type="checkbox" >Blue</label>
+            <input type="checkbox" name="color" data-search="colors" data-type="checkbox" id="blue" value="blue"/>
+
+            <label type="checkbox" name="color" data-search="colors" data-type="checkbox" >Green</label>
+            <input type="checkbox" name="color" data-search="colors" data-type="checkbox" id="green" value="green"/>
+
+            <label type="checkbox" name="color" data-search="colors" data-type="checkbox" >Red</label>
+            <input type="checkbox" name="color" data-search="colors" data-type="checkbox" id="red" value="red"/>
+
+            <label type="checkbox" name="color" data-search="colors" data-type="checkbox" >Black</label>
+            <input type="checkbox" name="color" data-search="colors" data-type="checkbox" id="black" value="black"/>
+
+            <label type="checkbox" name="color" data-search="colors" data-type="checkbox" >White</label>
+            <input type="checkbox" name="color" data-search="colors" data-type="checkbox" id="white" value="white"/>
+        </div>
 
         <label>Rarity:</label>
         <div class="dropdown" style="width: 100%;">
-            <input type="hidden" data-search-role="text-input" data-search="rarity" id="rarity" />
+            <input type="hidden" data-search-role="text-input" data-search="rarity" id="rarity" value="{{ rarity }}"/>
             <button style="width: 100%;" class="btn btn-default dropdown-toggle" type="button" id="dropdownForRarity" data-toggle="dropdown"><span id="rarityDropdownText">{{ rarityDropdownText }}</span></span></button>
 
             <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownForRarity">
                  <li role="presentation" ng-click="selectRarity('')">All</li>
-                 <li role="presentation" ng-click="selectRarity('Mythic Rare')">Mythic Rare</li>
+                 <li role="presentation" ng-click="selectRarity('Mythic')">Mythic</li>
                  <li role="presentation" ng-click="selectRarity('Rare')">Rare</li>
                  <li role="presentation" ng-click="selectRarity('Uncommon')">Uncommon</li>
                  <li role="presentation" ng-click="selectRarity('Common')">Common</li>
@@ -58,50 +59,37 @@
             <span class="glyphicon glyphicon-exclamation-sign" title="Type of card, identified by the text left of the dash (ex: Artifact, Instant, Planeswalker, Creature)"></span>
             Type:
         </label>
-        <input type="text" data-search-role="text-input" data-search="type" />
+        <input type="text" data-search-role="text-input" data-search="type" value="{{ type }}"/>
 
         <label>
             <span class="glyphicon glyphicon-exclamation-sign" title="Sub type of the card, identified by the text to the right of the dash (ex: Human, Equipment, Arcane)"></span>
             Subtype:
         </label>
-        <input type="text" data-search-role="text-input" data-search="subtypes" />
+        <input type="text" data-search-role="text-input" data-search="subtypes" value="{{ subtypes }}"/>
 
         <label>
             <span class="glyphicon glyphicon-exclamation-sign" title="Search the text of the card for keywords (this will exclude the flavor text)"></span>
             Text:
         </label>
-        <input type="text" data-search-role="text-input"data-search="text" />
+        <input type="text" data-search-role="text-input"data-search="text" value="{{ text }}"/>
 
         <input type="hidden" data-search="pageSize" value="50"/>
-        <input type="button" value="Search" ng-click="searchCards()"/>
+        <input type="button" value="Search" ng-click="searchCards()" style="width: 100%;"/>
     </div>
-
-
-
-
-
-
-
-
 
     <div id="search-results" >
-        <div ng-repeat="card in cards" class="row">
+        <div ng-repeat="card in cards" class="row" style="cursor: pointer;" >
+            <div ng-click="viewCard()">
+                <div class="col-md-4">
+                    <img ng-src="{{ card.imageUrl }}" />
+                </div>
 
-            <div class="col-md-4">
-                <img ng-src="{{ card.imageUrl }}" />
-            </div>
-
-            <div class="col-md-8">
-                <h4>{{ card.name }}</h4>
-                <p>{{ card.manaCost }}</p>
-                <p>{{ card.text }}</p>
+                <div class="col-md-8">
+                    <h4>{{ card.name }}</h4>
+                    <p>{{ card.manaCost }}</p>
+                    <p>{{ card.text }}</p>
+                </div>
             </div>
         </div>
-
     </div>
-
 </div>
-
-
-
-
