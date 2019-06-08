@@ -1,0 +1,30 @@
+body{
+    font-family: 'Lucida Console', Verdana, sans-serif;
+}
+
+#store-body{
+    width: 50%;
+    margin-left: 25%;
+}
+
+#store-header{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 60px;
+    background: #9529a2;
+}
+
+#store-footer{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 60px;
+    background: #9529a2;
+}
+
+#store-body{
+    margin-top: 85px;
+}
